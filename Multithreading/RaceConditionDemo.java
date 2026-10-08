@@ -7,7 +7,6 @@ public class RaceConditionDemo {
         when doing so the thread may access the value which is not complete updated.
         So, there will inconsistency .
  */
-    public static int counter =0;
     public static SharedContainer container = new SharedContainer();
 
     public static void main(String[] args) throws InterruptedException {
