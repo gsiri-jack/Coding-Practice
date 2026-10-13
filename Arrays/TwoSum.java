@@ -1,5 +1,7 @@
 package org.PracticeCoding.Arrays;
 
+import java.util.Arrays;
+
 /*
 
  ------- Leet code problem - 1 TWO SUM -------
@@ -30,7 +32,8 @@ public class TwoSum {
     int[] nums1 = {2,7,11,15};
     int[] nums2 = {2,7,11,15};
 
-        solution.twoSum(nums, 9);
+        System.out.println(Arrays.toString(solution.twoSum(nums, 30)));
+
     }
 
 }
@@ -38,7 +41,25 @@ public class TwoSum {
 
 class Solution {
     public int[] twoSum(int[] nums, int target) {
+        //Brute Force technique
+        int[] res = {-1,-1};
+        for(int i=0; i<nums.length; i++){
+            for(int j=i+1; j<nums.length; j++){
+                if(nums[i]+nums[j]==target){
+                   res[0]=i;
+                   res[1]=j;
+                    System.out.println(nums[i]+ "- "+nums[j]);
+                   return res;
+                }
+            }
+        }
 
+        return res;
+
+    }
+
+    public int[] twoSumOptimise(int[] nums, int target){
+//        optimal approach is using two pointers
         return nums;
     }
 }
